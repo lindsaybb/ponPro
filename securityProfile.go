@@ -142,7 +142,7 @@ func modifySecurityProfileHandler(olt *gopon.LumiaOlt, secp *gopon.SecurityProfi
 		fmt.Printf(">> Current value is [%v], toggle status? (Y/n)\n>> ", secp.GetPortSecurity())
 		togBool := strings.ToLower(sanitizeInput(readFromStdin()))
 		if togBool == "y" || togBool == "" {
-			secp.SetMacSG(!secp.GetPortSecurity())
+			secp.SetMacSG(!secp.GetMacSG())
 		}
 	case 5:
 		// ARP Inspection
