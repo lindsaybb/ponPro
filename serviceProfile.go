@@ -18,7 +18,7 @@ func displayServiceProfiles(olt *gopon.LumiaOlt) error {
 	if err != nil {
 		return err
 	}
-	spl.Tabwrite()
+	spl.TabwriteFull()
 	return nil
 }
 
